@@ -1,0 +1,39 @@
+name: dl4aed
+channels:
+  - defaults
+dependencies:
+  - requests
+  - ipywidgets
+  - nbdime
+  - librosa
+  - jupyterlab
+  - matplotlib
+  - nodejs
+  - jupyter
+  - pydot
+  - scikit-image
+  - imageio
+  - nltk
+  - pyopengl
+  - pandas
+  - pip
+  - tqdm
+  - wheel
+  - numpy
+  - py-xgboost
+  - joblib
+  - pyglet
+  - numexpr
+  - scipy
+  - graphviz
+  - widgetsnbextension
+  - python
+  - psutil
+  - pillow
+  - scikit-learn
+  - python-graphviz
+  - flake8
+  - autopep8
+  - pytest
+  - tensorflow-datasets
+

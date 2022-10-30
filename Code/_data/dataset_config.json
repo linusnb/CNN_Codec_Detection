@@ -1,0 +1,64 @@
+{
+    "reference_audio_path": "seed_files",
+    "uncompr_audio_path": "uncompr_wav",
+    "compressed_audio_path": "compressed_wav",
+    "segment_length": 1,
+    "number of min chunks": 50,
+    "mp3_32k": {
+        "codec": "libmp3lame",
+        "format": "mp3",
+        "bitrate": 32000,
+        "channels": 2,
+        "sampling_rate": 44100,
+        "ffmpeg_command": "ffmpeg -y -i {} -acodec libmp3lame -ac 2 -ab 32000 -ar 44100 {}"
+    },
+    "mp3_160k": {
+        "codec": "libmp3lame",
+        "format": "mp3",
+        "bitrate": 160000,
+        "channels": 2,
+        "sampling_rate": 44100,
+        "ffmpeg_command": "ffmpeg -y -i {} -acodec libmp3lame -ac 2 -ab 160000 -ar 44100 {}"
+    },
+    "mp3_192k": {
+        "codec": "libmp3lame",
+        "format": "mp3",
+        "bitrate": 192000,
+        "channels": 2,
+        "sampling_rate": 44100,
+        "ffmpeg_command": "ffmpeg -y -i {} -acodec libmp3lame -ac 2 -ab 192000 -ar 44100 {}"
+    },
+    "mp3_320k": {
+        "codec": "libmp3lame",
+        "format": "mp3",
+        "bitrate": 320000,
+        "channels": 2,
+        "sampling_rate": 44100,
+        "ffmpeg_command": "ffmpeg -y -i {} -acodec libmp3lame -ac 2 -ab 320000 -ar 44100 {}"
+    },
+    "aac_128": {
+        "codec": "libfdk_aac",
+        "format": "aac",
+        "bitrate": 128000,
+        "channels": 2,
+        "sampling_rate": 44100,
+        "ffmpeg_command": "ffmpeg -i {} -acodec aac -b:a 128k -ar 44100 {}"
+    },
+    "vorbis_vbr": {
+        "codec": "libvorbis",
+        "format": "ogg",
+        "bitrate": "variable bit rate: 4.0(~128k)",
+        "channels": 2,
+        "sampling_rate": 44100,
+        "ffmpeg_command": "ffmpeg -i {} -acodec libvorbis -q 4.0 -ac 2 -ar 44100 {}"
+    },
+    "uncompr_wav": {
+        "codec_ffmpeg": "pcm_s16le",
+        "codec_sf": "PCM_16",
+        "format_ffmpeg": "s16le",
+        "format": "wav",
+        "channels": 2,
+        "sampling_rate": 44100,
+        "ffmpeg_command": "ffmpeg -i {} -acodec pcm_s16le -ac 2 -ar 44100 {}"
+    }
+}
